@@ -66,6 +66,7 @@ To download task level reports, run the following Powershell cmdlet.
 ![Screen to choose how to filter Migratino Manager reports](media/mm-reports-powershell-filter.png).
 
 5. The aggregated report zip file will be found in the same folder as the PowerShell cmdlet.
+6. To successfully execute the script in GCCH/DoD, edit line 58 and change from microsoftonline.com to microsoftonline.us
 
 
 ## Summary Report
