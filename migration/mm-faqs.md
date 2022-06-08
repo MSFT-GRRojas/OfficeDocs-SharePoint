@@ -23,7 +23,7 @@ description: Migration Manager FAQs
 # Frequently Asked Questions: Migration Manager
 
 **Question:** Can I migrate content from SharePoint Server? </br>
-Answer:   At this time, Migration Manager supports the migration of file shares and cloud sources including Google, Dropbox, and Box  It does not support the migration of content from SharePoint Server.  See SPMT (SharePoint Migration Tool) for SharePoint Server migration.
+Answer:   At this time, Migration Manager supports the migration of file shares and cloud sources including Google, Dropbox, Egnyte and Box  It does not support the migration of content from SharePoint Server.  See SPMT (<a href="https://docs.microsoft.com/en-us/sharepointmigration/how-to-use-the-sharepoint-migration-tool">SharePoint Migration Tool</a>) for SharePoint Server migration.
 
 **Question:** Can I run the SharePoint Migration Tool (SPMT) on the same computer that I have the Migration Manager agent installed?</br>
 Answer:   Yes.
@@ -35,10 +35,10 @@ Answer:    No.  As long as you can access the file share from the migration agen
 Answer:    Microsoft multi-factor authentication is supported; however third party multi-factor authentication is not.
 
 **Question:** Can I manually assign a task to a migration agent I have set up?</br>
-Answer:   No. Migration Manager does it for you by automatically distributing tasks to the next available agent. However coming soon, if you want to target migration tasks to a group of agents, you will be able to do so.
+Answer:   Yes.  Migration Manager tasks can be assigned to individual agents or Agent Groups. 
 
 **Question:** Where are local Migration Manager logs stored?</br>
-Answer: The logs are stored here:  `C:\Users\<Username>\AppData\Roaming\Microsoft\SPMigration`.
+Answer: The logs are stored here:  `C:\Users\<Username>\AppData\Roaming\Microsoft\SPMigration`.  You can also designate a specific folder for your logs.
 
 **Question:** Can I rename my temporary working folder?</br>
 Answer: Yes. By default the name of the folder is `%appdata%\Microsoft\SPMigration`.  However through the Migration Manager UI, you can configure the physical location of the folder where logs and reports are stored on the agent's machine. You can also see the available disc space so you can choose a drive that has enough storage before starting your migration.
@@ -57,7 +57,7 @@ Answer: An agent can perform 5 to 10 tasks simultaneously, depending on the size
 Answer: Pausing a task does not release the agent to another task. The agent remains unavailable to accept a new task until the task is resumed and completed, or if the task is deleted. 
 
 **Question:** How long does an agent stay connected to Migration Manager?</br>
-Answer:  The connection between an agent and Migration Manager stays active as long as the computer is still running and the SharePoint admin credentials that were used to sign into the agent are still valid. If the agent does becomes disconnected, the agent holds the token to the Migration Manager for up to 7 days. After which the agent will need to be reinstalled.
+Answer:  The connection between an agent and Migration Manager stays active as long as the computer is still running and the SharePoint admin credentials that were used to sign into the agent are still valid. If the agent does becomes disconnected, the agent holds the token to the Migration Manager for up to 7 days. After which the agent will need to be reinstalled.  Always ensure you download the latest agent.
 
 **Question:**  Is Migration Manager available for Government clouds?</br>
 Answer:  Yes. Here's how you configure it: [Government cloud settings](./mm-gov-cloud.md)
